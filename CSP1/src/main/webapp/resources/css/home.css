@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration:none !important;
+} /* 화면 전체 렙 */
+.wrapper {
+	width: 100%;
+} /* content 랩 */
+.wrap {
+	width: 100%;
+	margin: auto;
+} /* 홈페이지 기능 네비 */
+.top_gnb_area {
+	width: 100%;
+	height: 50px;
+	background-color: rgb(51, 51, 51);
+	margin-top: 0;
+	color: white;
+} /* 로고, 검색, 로그인 */
+
+.top_gnb_area_button_gruop{
+	float: right;
+}
+
+.top_login_button{
+	width : 70px;
+	height:50px;
+	border : none;
+	background-color: rgb(51, 51, 51);
+}
+
+.modal_login_wrapper{
+	width: 343px;
+    height: 271px;
+    padding: 20px 19px;
+    border: 1px solid #808080;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    position: relative;
+    background: #fff;
+}
+
+.modal_login_mainTitle{
+	font-family: 'open_sansbold',sans-serif;
+    font-size: 26px;
+    color: #8393a7;
+    line-height: 40px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.modal_login_input_wrapper{
+	float: left;
+    width: 303px;
+    padding-top: 3px;
+}
+
+.modal_login_span {
+    display: inline-block;
+    margin: 11px 0 0 0;
+    padding: 0;
+    float: left;
+}
+.ol_idlabel {
+    top: 0px;
+    left: 0px;
+    color: #595968;
+    font-size: 11px;
+    line-height: 20px;
+    display: block;
+    padding: 0px;
+    display: none;
+}
+#ol_id {
+    display: block;
+    margin: 0 !important;
+    padding: 0 19px;
+    width: 303px;
+    height: 32px;
+    border: 1px solid #b5b5b5;
+    background-color: #fff !important;
+    line-height: 1.6em;
+    border-radius: 16px;
+}
+.ol_pwlabel {
+    top: 0px;
+    left: 115px;
+    color: #595968;
+    font-size: 11px;
+    line-height: 20px;
+    display: block;
+    display: none;
+}
+#ol_pw {
+    display: block;
+    margin: 0 !important;
+    padding: 0 19px;
+    width: 303px;
+    height: 32px;
+    border: 1px solid #b5b5b5;
+    background: #fff !important;
+    vertical-align: top;
+    line-height: 1.6em;
+    border-radius: 16px;
+}
+#ol_submit {
+    display: inline-block;
+    width: 303px;
+    height: 57px;
+    border: 0;
+    background: #efeff2;
+    color: #6d6d6d;
+    font-size: 12px;
+    vertical-align: top;
+    border-radius: 5px;
+    margin-top: 13px;
+    cursor: pointer;
+}
+
+#ol_auto {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+#ol_auto input {
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    margin-right: 3px;
+    position: relative;
+    top: -1px;
+}
+
+#ol_auto label {
+    font-size: 11px;
+    line-height: 20px;
+    margin-right: 11px;
+}
+
+#ol_svc {
+    height: 20px;
+    line-height: 20px;
+    font-size: 11px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.ol_svc_a_b1{
+    border-right: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    padding: 0 15px;
+    font-size: 11px;
+}
+.ol_svc_a_b2{
+   
+    padding: 0 10px;
+    font-size: 11px;
+}
+
+#ol_svc a {
+    color: #595968;
+}
+
+
+.top_area {
+	width: 100%;
+	height: 100px; /* background-color: #f7f0b9; */
+} /* 로고 영역 */
+.logo_area {
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	float: left;
+} /* 검색 박스 영역 */
+.navi_bar_area {
+	width: 100%;
+	height: 50px;
+	border-top : 1px solid #EAEAEA;
+	border-bottom : 1px solid #EAEAEA;
+	background-color: white;
+} /* 홈페이지 메인 제품 목록 */
+
+.content_area {
+	width: 100%;
+	background-color: white;
+	height: 1000px;
+} /* float 속성 해제 */
+.clearfix {
+	clear: both;
+}
+h1{
+	margin: 0;
+}
+footer{
+	width: 100%;
+    height: 240px;
+    margin: 0px auto;
+    background-color: rgb(85, 85, 85);
+}
+.footer_content{
+	padding: 50px 40px;
+	
+}
+#logo{
+	 width:200px;
+	  height:60px;
+}
+.glyphicon_center{
+	
+	margin: 20px 0;
+}
+
+.glyphicon{
+	margin: 10px 10px 0 40px;
+	cursor: pointer;
+	font-size: 30px;
+}
+
+.logo_area_search{
+	margin: 15px 10px 0px 10px;
+	float: right;
+	border: none;
+	border-bottom: 3px solid gray;
+}
+
+.glyphicon-search{
+	float: right;
+	margin: 10px 40px 0 15px; 
+}
+#logo{
+	display: block;
+	margin-left: 44%;
+	margin-right: auto;
+	margin-top: -45px;
+}
+
+.navi_bar_area{
+	width : 100%;
+	height: 50px;
+    padding : 0 auto;
+	text-align: center;
+	
+
+}
+.mainmenu_ul{
+	list-style: none;
+	display:table;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.mainmenu_li{
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border: 0;
+	float: left;
+	width: 147.5px;
+	line-height:48px;
+	
+}
+.mainmenu_li span{
+	color: #747474;
+}
+.mainmenu_li span:hover {
+	
+	font-size: 16px;
+	font-weight: bold;
+}
