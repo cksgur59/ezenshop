@@ -1,12 +1,11 @@
-package kr.co.repository;
+package kr.co.service;
 
 import kr.co.vo.MemberVO;
 
-public interface MemberDAO {
+public interface MemberService {
 
 	public void memberJoin(MemberVO vo);
 
 	public int idCheck(String id);
-	
 	
 }

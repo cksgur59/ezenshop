@@ -13,15 +13,16 @@
 		
 		<br>
 		
-		ID: <input name="id">
-		
+		ID: <input name="id"  class="id_input">
+		<span class="id_input_re1">사용 가능한 아이디입니다.</span>
+		<span class="id_input_re2">중복된 아이디입니다.</span>
 		<br>
-		
+
 		<button style="border: 5px; border-radius: 5px; width: 280px; padding: 10px 15px; margin-top: 15px; color: white; background-color: #3A1D1D">아이디 중복 체크</button>
 		
 		<br><br>
 		
-		Password: <input type="password" name="pw1">
+		Password: <input type="password" name="pw">
 		
 		<br><br>
 		
@@ -44,7 +45,7 @@
 		
 		<br><br>
 		
-		핸드폰: <input name="phoneNumber" type="tel">
+		핸드폰: <input name="phone" type="tel">
 		
 		<br><br>
 		
@@ -59,6 +60,24 @@
 
 </div>
 
+<<script type="text/javascript">
+
+// 아이디 중복 검사
+$('.id_input').on("propertychange change keyup paste input", function(){
+	console.log("keyup 테스트");
+	var id = $('.id_input').val();
+	var data = {id : id}
+	
+	$.ajax({
+		type: "post",
+		url: "/member/memberIdCheck",
+		data : data
+	});
+	
+
+});
+
+</script>
 
 
 <%@include file="../include/footer.jsp"%>

@@ -7,28 +7,29 @@ public class MemberVO {
 	private String id;
 	private String pw;
 	private String name;
+	private String gender;
 	private String email;
 	private String address;
+	private String phone;
 	private int admin;
-	private Date regDate;
-	private Date updateDate;
 	private int money;
 	private int point;
-	
+	private Date regDate;
+	private Date updateDate;
+
 	public MemberVO() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public MemberVO(String id, String pw, String name, String email, String address, int admin, int money, int point) {
+
+	public MemberVO(String id, String pw, String name, String gender, String email, String address, String phone) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
+		this.gender = gender;
 		this.email = email;
 		this.address = address;
-		this.admin = admin;
-		this.money = money;
-		this.point = point;
+		this.phone = phone;
 	}
 
 	public String getId() {
@@ -55,6 +56,14 @@ public class MemberVO {
 		this.name = name;
 	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -71,28 +80,20 @@ public class MemberVO {
 		this.address = address;
 	}
 
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
 	public int getAdmin() {
 		return admin;
 	}
 
 	public void setAdmin(int admin) {
 		this.admin = admin;
-	}
-
-	public Date getRegDate() {
-		return regDate;
-	}
-
-	public void setRegDate(Date regDate) {
-		this.regDate = regDate;
-	}
-
-	public Date getUpdateDate() {
-		return updateDate;
-	}
-
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
 	}
 
 	public int getMoney() {
@@ -111,10 +112,20 @@ public class MemberVO {
 		this.point = point;
 	}
 
-	@Override
-	public String toString() {
-		return "MemberVO [id=" + id + ", name=" + name + ", admin=" + admin + ", money=" + money + ", point=" + point
-				+ "]";
+	public Date getRegDate() {
+		return regDate;
+	}
+
+	public void setRegDate(Date regDate) {
+		this.regDate = regDate;
+	}
+
+	public Date getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Date updateDate) {
+		this.updateDate = updateDate;
 	}
 
 	@Override
@@ -141,7 +152,14 @@ public class MemberVO {
 			return false;
 		return true;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", gender=" + gender + ", email=" + email
+				+ ", address=" + address + ", phone=" + phone + ", admin=" + admin + ", money=" + money + ", point="
+				+ point + ", updateDate=" + updateDate + "]";
+	}
+
 	
 	
 }
