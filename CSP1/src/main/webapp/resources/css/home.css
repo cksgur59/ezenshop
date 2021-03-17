@@ -272,13 +272,28 @@ footer{
 	font-weight: bold;
 }
 
-/*회원가입 페이지 아이디 중복체크*/
-.id_input_re1{
-	color: green;
-	display: none;
-}
-.id_input_re2{
-	color: red;
-	display: none;
+#mail_check_button_span{
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
 }
 
+/* 이메일 인증 */
+#mail_check_input_box_false{
+	background-color: #ebebe4;
+}
+#mail_check_input_box_true{
+	background-color: white;
+}
+.correct{
+    color : green;
+}
+.incorrect{
+    color : red;
+}
+
+/* 주소찾기 */
+.address_button_span{
+	border : 1px solid gray;
+	cursor: pointer;
+}
