@@ -27,6 +27,12 @@ public class MemberDAOImpl implements MemberDAO{
 		// TODO Auto-generated method stub
 		return sqlSession.selectOne(NS+".idCheck", id);
 	}
+
+	@Override
+	public MemberVO memberLogin(MemberVO member) {
+		// TODO Auto-generated method stub
+		return sqlSession.selectOne(NS+".memberLogin", member);
+	}
 	
 	
 	

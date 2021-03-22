@@ -4,6 +4,8 @@ import java.util.Random;
 
 import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.co.service.MemberService;
 import kr.co.vo.MemberVO;
@@ -102,12 +105,46 @@ public class MemberController {
         return num;
 	}
 	
-	// 로그인
-	@RequestMapping(value = "login",method = RequestMethod.POST)
-	public void login() {
-		
-		
-		
-	}
+	/* 로그인 */
+	@ResponseBody
+    @RequestMapping(value="login", method=RequestMethod.GET)
+    public String loginGET(MemberVO member, RedirectAttributes rttr) throws Exception{
+
+		System.out.println(member);
+    	MemberVO lvo = memberService.memberLogin(member);
+    	System.out.println(lvo);
+    	if(lvo == null) {    // 일치하지 않는 아이디, 비밀번호 입력 경우
+            
+            int result = 0;
+            rttr.addFlashAttribute("result", result);
+            return "fail";
+            
+        }
+        return "success";
+
+    }
+	/* 로그인 */
+    @RequestMapping(value="login.do", method=RequestMethod.POST)
+    public String loginPOST(HttpServletRequest request, MemberVO member, RedirectAttributes rttr) throws Exception{
+
+		HttpSession session = request.getSession();
+    	MemberVO lvo = memberService.memberLogin(member);
+    	
+    	session.setAttribute("member", lvo); // 로그인 성공
+    	
+        return "redirect:/home";
+
+    }
 	
+    /* 로그아웃 */
+    @RequestMapping(value="logout", method=RequestMethod.GET)
+    public String logoutGET(HttpServletRequest request) throws Exception{
+    	
+    	HttpSession session = request.getSession();
+    	
+    	session.invalidate();
+    	
+        return "redirect:/home";
+    }
+
 }

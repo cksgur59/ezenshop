@@ -6,8 +6,8 @@
 
 	<!-- 회원가입 -->
 	<insert id="memberJoin">
-		INSERT INTO member (id,pw,name,gender,email,address,phone,admin,money,point)
-		 VALUES(#{id},#{pw},#{name},#{gender},#{email},#{address},#{phone},#{admin},0,0)
+		INSERT INTO member (id,pw,name,gender,email,address1,address2,address3,phone,admin,money,point)
+		 VALUES(#{id},#{pw},#{name},#{gender},#{email},#{address1},#{address2},#{address3},#{phone},#{admin},0,0)
 	</insert>
 	
 	<!-- 아이디 중복 체크 -->
@@ -16,6 +16,14 @@
 	 	SELECT COUNT(*) FROM member WHERE id = #{id}
 	
 	</select>
+	
+	<!-- 로그인 -->
+      <select id="memberLogin" resultType="kr.co.vo.MemberVO">
+      
+         select id, name, admin, money, point from member where id = #{id} and pw = #{pw}
+      
+      </select>
+
 	
 
 </mapper>

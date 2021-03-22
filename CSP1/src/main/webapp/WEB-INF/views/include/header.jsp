@@ -20,7 +20,19 @@
 		<div class="wrap">
 			<div class="top_gnb_area">
 				<div class="top_gnb_area_button_gruop">
-				<button class="top_login_button" type="button" data-toggle="modal"data-target="#myModal">LOGIN</button>
+				<!-- 비로그인 상태 -->
+				<c:if test="${member==null}">
+						<button class="top_login_button" type="button" data-toggle="modal"data-target="#myModal">LOGIN</button>
+				</c:if>
+				<!-- 로그인 상태 -->
+				<c:if test="${member!=null }">
+						<span>${member.name}님 환영합니다.</span>
+							<!-- 관리자 전용 -->
+								<c:if test="${member.admin==1}">
+									<button class="top_admin_button" type="button">ADMIN</button>
+								</c:if>
+						<button class="top_logout_button" type="button">LOGOUT</button>
+				</c:if>
 				<button class="top_login_button" type="button" >MY PAGE</button>
 				<button class="top_login_button" type="button" >WISH</button>
 				<button class="top_login_button" type="button" >CART</button>

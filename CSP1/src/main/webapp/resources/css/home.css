@@ -31,6 +31,20 @@
 	background-color: rgb(51, 51, 51);
 }
 
+.top_logout_button{
+	width : 70px;
+	height:50px;
+	border : none;
+	background-color: rgb(51, 51, 51);
+}
+
+.top_admin_button{
+	width : 70px;
+	height:50px;
+	border : none;
+	background-color: rgb(51, 51, 51);
+}
+
 .modal_login_wrapper{
 	width: 343px;
     height: 271px;
