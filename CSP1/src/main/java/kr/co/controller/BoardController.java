@@ -31,4 +31,39 @@ public class BoardController {
 		
 		return "member/memberJoin";
 	}
+	
+	@RequestMapping(value = "/man",method = RequestMethod.GET)
+	public String boardManGET() {
+		return "board/man";
+	}
+	
+	@RequestMapping(value = "/woman",method = RequestMethod.GET)
+	public String boardWomanGET() {
+		return "board/woman";
+	}
+	
+	@RequestMapping(value = "/fakesocks",method = RequestMethod.GET)
+	public String boardfakesocksGET() {
+		return "board/fakesocks";
+	}
+	
+	@RequestMapping(value = "/babyKids",method = RequestMethod.GET)
+	public String boardBabyKidsGET() {
+		return "board/babyKids";
+	}
+	
+	@RequestMapping(value = "/kneeStocking",method = RequestMethod.GET)
+	public String boardKneeStockingGET() {
+		return "board/kneeStocking";
+	}
+	
+	@RequestMapping(value = "/acc",method = RequestMethod.GET)
+	public String boardAccGET() {
+		return "board/acc";
+	}
+	
+	@RequestMapping(value = "/notice",method = RequestMethod.GET)
+	public String boardNoticeGET() {
+		return "board/notice";
+	}
 }

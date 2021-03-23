@@ -16,7 +16,7 @@ public class AdminInterceptor implements HandlerInterceptor{
 			throws Exception {
 		
 		/* 관리자 페이지 진입 전 관리자 권한 확인 인터셉터 */
-		System.out.println("admininterceptor진입");
+		
 		HttpSession session = request.getSession(); // 세션 획득
 		
 		MemberVO lvo = (MemberVO)session.getAttribute("member"); // lvo에 'member' 세션 대입

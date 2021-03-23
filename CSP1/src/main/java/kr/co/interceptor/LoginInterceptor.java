@@ -14,7 +14,7 @@ public class LoginInterceptor implements HandlerInterceptor{
 			throws Exception {
 		
 		/* 로그인 진입전 세션제거 인터셉터 */
-		System.out.println("logininterceptor진입");
+		
 		HttpSession session = request.getSession();
 		
 		session.invalidate();

@@ -55,14 +55,14 @@
 			<div class="navi_bar_area">
 				<div class="mainmenu">
 					<ul class="mainmenu_ul">
-							<li class="mainmenu_li"><a href="/"><span>HOME</span></a></li>
-							<li class="mainmenu_li"><a href="/man"><span>MAN</span></a></li>
-							<li class="mainmenu_li"><a href="/woman"><span>WOMAN</span></a></li>
-							<li class="mainmenu_li"><a href="/fakesocks"><span>FAKESOCKS</span></a></li>
-							<li class="mainmenu_li"><a href="/babyKids"><span>BABY/KIDS</span></a></li>
-							<li class="mainmenu_li"><a href="/kneeStocking"><span>KNEE/STOCKING</span></a></li>
-							<li class="mainmenu_li"><a href="/acc"><span>ACC</span></a></li>
-							<li class="mainmenu_li"><a href="/notice"><span>NOTICE</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>HOME</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>MAN</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>WOMAN</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>FAKESOCKS</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>BABY/KIDS</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>KNEE/STOCKING</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>ACC</span></a></li>
+							<li class="mainmenu_li"><a href="#"><span>NOTICE</span></a></li>
 					</ul>
 				</div>
 			</div >
